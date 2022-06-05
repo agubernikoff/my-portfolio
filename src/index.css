@@ -1,13 +1,383 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #15153d;
+  color: #969fec;
+}
+.App {
+  display: flex;
+  flex-direction: row;
+}
+h1 {
+  font-size: 10vw;
+}
+.bar {
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 1;
+}
+.nav-element {
+  margin: 5vw;
+}
+.gif {
+  width: 100%;
+  z-index: -2;
+}
+.nav-icons {
+  display: flex;
+  margin-bottom: 2vw;
+}
+.icons {
+  width: 100%;
+  position: relative;
+}
+.content {
+  width: 85%;
+  margin-left: 15%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#top,
+#work {
+  height: 100vh;
+  text-align: center;
+}
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  height: 70%;
+}
+
+#top p {
+  font-size: 2.5vw;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+#contact {
+  position: relative;
+  height: 100vh;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  margin: auto;
+  /* margin-top: 15%; */
+}
+input {
+  margin-top: 1%;
+  width: 150%;
+  font-family: baskerville;
+  font-size: 2vw;
+  background-color: #969fec;
+  color: #15153d;
+}
+textarea {
+  margin-top: 1%;
+  width: 150%;
+  height: 14vw;
+  font-family: baskerville;
+  font-size: 2vw;
+  background-color: #969fec;
+  color: #15153d;
+}
+::placeholder {
+  color: #15153d77;
+}
+button {
+  cursor: pointer;
+  width: 75%;
+  margin-top: 3%;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #001aff;
+  font-size: 1.75rem;
+  border: #001aff 0.125em solid;
+  text-shadow: 0 0 0.75em #001aff;
+  box-shadow: inset 0 0 0.75em #001aff, 0 0 0.75em #001aff;
+  position: relative;
+  /* transition: background-color 100ms linear; */
+}
+.navbar button:first-of-type {
+  margin-top: -20%;
+}
+.submit {
+  margin-top: 3%;
+  color: #969fec;
+  border: #969fec 0.125em solid;
+  text-shadow: 0 0 0.75em #969fec;
+  box-shadow: inset 0 0 0.75em #969fec, 0 0 0.75em #969fec;
+}
+.matching {
+  cursor: pointer;
+  width: 80%;
+  margin-top: 3%;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #ffee00;
+  font-size: 1.75rem;
+  border: #ffee00 0.125em solid;
+  text-shadow: 0 0 0.75em #ffee00;
+  box-shadow: inset 0 0 0.75em #ffee00, 0 0 0.75em #ffee00;
+  position: relative;
+
+  animation-name: flash-on;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+button::before {
+  pointer-events: none;
+  content: " ";
+  position: absolute;
+  background: #001aff;
+  top: 140%;
+  left: 25%;
+  height: 50%;
+  width: 50%;
+
+  transform: perspective(1em) rotateX(50deg);
+  filter: blur(0.33em);
+  opacity: 0.5;
+}
+.submit::before {
+  background: #969fec;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.matching::before {
+  background: #ffee00;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: #001aff;
+  box-shadow: 0 0 1em 0.5em #001aff;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+.submit::after {
+  background: #969fec;
+  box-shadow: 0 0 1em 0.5em #969fec;
+}
+.matching::after {
+  background: #ffee00;
+  box-shadow: 0 0 1em 0.5em #ffee00;
+}
+button:hover {
+  /* background: #001aff; */
+  color: black;
+  text-shadow: none;
+}
+button:hover::before {
+  opacity: 1;
+}
+button:hover::after {
+  opacity: 1;
+}
+
+.thankyou {
+  /* color: white; */
+  width: fit-content;
+  margin: auto;
+  /* margin-top: 20%; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3.5vw;
+}
+.contact-name {
+  font-size: 5.9vw;
+  position: relative;
+  top: 1vw;
+  text-align: center;
+  margin-top: 0;
+}
+
+.connect {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 3vw;
+  text-align: center;
+}
+.projects {
+  background-color: transparent;
+  width: 30vw;
+}
+
+.work-hold {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30vh;
+}
+
+.tilt {
+  margin-left: 2.75vw;
+  margin-top: 2.75vw;
+  height: 20%;
+}
+
+#work img {
+  width: 100%;
+  height: 25vh;
+  border-radius: 10px;
+}
+
+#work h2 {
+  text-align: center;
+}
+
+#work a {
+  text-align: center;
+  color: white;
+}
+
+.details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.link-hold {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  z-index: 3;
+}
+
+.link {
+  margin: 5%;
+  font-weight: bold;
+  font-size: 2vw;
+  z-index: 1;
+  border: solid;
+  text-decoration: none;
+  background-color: rgb(152, 196, 247);
+}
+
+.opaque {
+  position: absolute;
+  width: fit-content;
+  top: 0vw;
+  left: 0vw;
+}
+
+.links-hold {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  z-index: 3;
+}
+
+.links {
+  margin: 5%;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 1;
+  border: solid;
+  text-decoration: none;
+  background-color: rgb(152, 196, 247);
+}
+#work {
+  position: relative;
+}
+a {
+  cursor: pointer;
+}
+.skills-container {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.skill-icons {
+  width: 13.5vw;
+}
+
+.flush-down {
+  animation-name: flush-down;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+.flush-up {
+  animation-name: flush-up;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+@keyframes flush-down {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(720deg) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes flush-up {
+  from {
+    transform: rotate(720deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes flash-on {
+  from {
+    opacity: 0;
+  }
+  2.5% {
+    opacity: 0.5;
+  }
+  5% {
+    opacity: 0.1;
+  }
+  7.5% {
+    opacity: 0.6;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
