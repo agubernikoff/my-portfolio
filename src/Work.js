@@ -5,6 +5,7 @@ import rickandmorty from "./assets/rickandmorty.png";
 import opaque from "./assets/opaque.png";
 import loading from "./assets/loading.gif";
 import cap from "./assets/cap.png";
+import port from "./assets/port.png";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -216,6 +217,44 @@ function Work() {
             <img
               className="ye"
               src={cap}
+              onMouseEnter={() => enterEarn()}
+              onMouseLeave={() => exitEarn()}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail4 ? (
+              <div
+                className="details"
+                onMouseEnter={() => enterEarn()}
+                onMouseLeave={() => exitEarn()}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  {/* <a
+                    className="links"
+                    href="https://youtu.be/E4Ft8SYuUGA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a> */}
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/my-portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={port}
               onMouseEnter={() => enterEarn()}
               onMouseLeave={() => exitEarn()}
               alt="something"
