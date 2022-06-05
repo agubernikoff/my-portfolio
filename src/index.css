@@ -106,7 +106,7 @@ button {
   border-radius: 10px;
   background-color: transparent;
   color: #001aff;
-  font-size: 1.75rem;
+  font-size: 1.75vw;
   border: #001aff 0.125em solid;
   text-shadow: 0 0 0.75em #001aff;
   box-shadow: inset 0 0 0.75em #001aff, 0 0 0.75em #001aff;
@@ -130,7 +130,7 @@ button {
   border-radius: 10px;
   background-color: transparent;
   color: #ffee00;
-  font-size: 1.75rem;
+  font-size: 1.75vw;
   border: #ffee00 0.125em solid;
   text-shadow: 0 0 0.75em #ffee00;
   box-shadow: inset 0 0 0.75em #ffee00, 0 0 0.75em #ffee00;
