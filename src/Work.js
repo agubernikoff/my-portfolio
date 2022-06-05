@@ -12,57 +12,34 @@ function Work() {
   const [detail2, setDetail2] = useState(true);
   const [detail3, setDetail3] = useState(true);
   const [detail4, setDetail4] = useState(true);
+  const [detail5, setDetail5] = useState(true);
 
   function enterYe() {
     setDetail(false);
-    setDetail2(true);
-    setDetail3(true);
-    setDetail4(true);
   }
 
   function exitYe() {
     setDetail(true);
-    setDetail2(true);
-    setDetail3(true);
-    setDetail4(true);
   }
   function enterLeaf() {
-    setDetail(true);
     setDetail2(false);
-    setDetail3(true);
-    setDetail4(true);
   }
 
   function exitLeaf() {
-    setDetail(true);
     setDetail2(true);
-    setDetail3(true);
-    setDetail4(true);
   }
   function enterGroup() {
-    setDetail(true);
-    setDetail2(true);
     setDetail3(false);
-    setDetail4(true);
   }
 
   function exitGroup() {
-    setDetail(true);
-    setDetail2(true);
     setDetail3(true);
-    setDetail4(true);
   }
   function enterEarn() {
-    setDetail(true);
-    setDetail2(true);
-    setDetail3(true);
     setDetail4(false);
   }
 
   function exitEarn() {
-    setDetail(true);
-    setDetail2(true);
-    setDetail3(true);
     setDetail4(true);
   }
 
@@ -225,11 +202,11 @@ function Work() {
         </Tilt>
         <Tilt className="tilt">
           <div className="projects">
-            {!detail4 ? (
+            {!detail5 ? (
               <div
                 className="details"
-                onMouseEnter={() => enterEarn()}
-                onMouseLeave={() => exitEarn()}
+                onMouseEnter={() => setDetail5(false)}
+                onMouseLeave={() => setDetail5(true)}
               >
                 <div className="links-hold">
                   <img src={opaque} className="opaque" alt="opaque" />
@@ -255,8 +232,8 @@ function Work() {
             <img
               className="ye"
               src={port}
-              onMouseEnter={() => enterEarn()}
-              onMouseLeave={() => exitEarn()}
+              onMouseEnter={() => setDetail5(false)}
+              onMouseLeave={() => setDetail5(true)}
               alt="something"
             />
           </div>
