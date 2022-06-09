@@ -9,7 +9,7 @@ function Homepage() {
           Hello, I'm a new graduate of the Flatiron School's Software
           Engineering program, looking for a full time full stack software
           engineering job. I'm enthusiastic about complex, creative
-          problem-solving, thoughtful design, and effiecient code. My skills
+          problem-solving, thoughtful design, and efficient code. My skills
           include but are not limited to JavaScript, React, and Ruby on Rails.
         </p>
         <p>
