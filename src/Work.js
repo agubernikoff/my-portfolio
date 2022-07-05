@@ -6,6 +6,7 @@ import opaque from "./assets/opaque.png";
 import loading from "./assets/loading.gif";
 import cap from "./assets/cap.png";
 import port from "./assets/port.png";
+import creative from "./assets/creative.png";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -13,6 +14,7 @@ function Work() {
   const [detail3, setDetail3] = useState(true);
   const [detail4, setDetail4] = useState(true);
   const [detail5, setDetail5] = useState(true);
+  const [detail6, setDetail6] = useState(true);
 
   function enterYe() {
     setDetail(false);
@@ -234,6 +236,44 @@ function Work() {
               src={port}
               onMouseEnter={() => setDetail5(false)}
               onMouseLeave={() => setDetail5(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail6 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail6(false)}
+                onMouseLeave={() => setDetail6(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  {/* <a
+                    className="links"
+                    href="https://youtu.be/E4Ft8SYuUGA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a> */}
+                  <a
+                    className="links"
+                    href="https://alexandergubernikoff.crevado.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Creative Portfolio
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={creative}
+              onMouseEnter={() => setDetail6(false)}
+              onMouseLeave={() => setDetail6(true)}
               alt="something"
             />
           </div>
