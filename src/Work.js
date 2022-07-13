@@ -7,6 +7,7 @@ import loading from "./assets/loading.gif";
 import cap from "./assets/cap.png";
 import port from "./assets/port.png";
 import creative from "./assets/creative.png";
+import float from "./assets/float.gif";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -15,6 +16,7 @@ function Work() {
   const [detail4, setDetail4] = useState(true);
   const [detail5, setDetail5] = useState(true);
   const [detail6, setDetail6] = useState(true);
+  const [detail7, setDetail7] = useState(true);
 
   function enterYe() {
     setDetail(false);
@@ -202,6 +204,7 @@ function Work() {
             />
           </div>
         </Tilt>
+
         <Tilt className="tilt">
           <div className="projects">
             {!detail5 ? (
@@ -212,17 +215,17 @@ function Work() {
               >
                 <div className="links-hold">
                   <img src={opaque} className="opaque" alt="opaque" />
-                  {/* <a
+                  <a
                     className="links"
-                    href="https://youtu.be/E4Ft8SYuUGA"
+                    href="https://agubernikoff.github.io/float/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Demo
-                  </a> */}
+                    Deployed Site
+                  </a>
                   <a
                     className="links"
-                    href="https://github.com/agubernikoff/my-portfolio"
+                    href="https://github.com/agubernikoff/float/tree/main"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -233,7 +236,7 @@ function Work() {
             ) : null}
             <img
               className="ye"
-              src={port}
+              src={float}
               onMouseEnter={() => setDetail5(false)}
               onMouseLeave={() => setDetail5(true)}
               alt="something"
@@ -274,6 +277,44 @@ function Work() {
               src={creative}
               onMouseEnter={() => setDetail6(false)}
               onMouseLeave={() => setDetail6(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail7 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail7(false)}
+                onMouseLeave={() => setDetail7(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  {/* <a
+                    className="links"
+                    href="https://youtu.be/E4Ft8SYuUGA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a> */}
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/my-portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={port}
+              onMouseEnter={() => setDetail7(false)}
+              onMouseLeave={() => setDetail7(true)}
               alt="something"
             />
           </div>
