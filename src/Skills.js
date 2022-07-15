@@ -6,9 +6,10 @@ import react from "./assets/skills/react.png";
 import ruby from "./assets/skills/ruby.png";
 import rails from "./assets/skills/rails.png";
 import ps from "./assets/skills/ps.png";
+import three from "./assets/skills/three.png";
 
 function Skills() {
-  const skills = [react, ruby, rails, ps, html, css, js];
+  const skills = [react, ruby, rails, ps, html, css, js, three];
   const skillIcons = skills.map((s) => (
     <img
       className="skill-icons"
