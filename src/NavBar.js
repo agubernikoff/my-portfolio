@@ -5,6 +5,7 @@ import linkedin from "./assets/linkedin.png";
 import resume from "./assets/resume.png";
 import github from "./assets/github.png";
 import medium from "./assets/medium.png";
+import ajg from "./assets/AlexanderGubernikoffResume.pdf";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -85,11 +86,7 @@ function NavBar() {
         >
           <img src={linkedin} alt={linkedin} className="icons" />
         </a>
-        <a
-          href="https://docs.google.com/document/d/e/2PACX-1vREeCq_S8vERoS6fQl5RB1DV_nNTskjHgsTSYnOJC_eY3NuD0WoCq_Ssuk2BKoQtUOMxn12B7_F5MTS/pub"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={ajg} target="_blank" rel="noreferrer">
           <img src={resume} alt={resume} className="icons" />
         </a>
         <a
