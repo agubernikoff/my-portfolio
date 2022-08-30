@@ -8,6 +8,7 @@ import cap from "./assets/cap.png";
 import port from "./assets/port.png";
 import creative from "./assets/creative.png";
 import float from "./assets/float.gif";
+import anchor from "./assets/anchor.png";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -17,6 +18,7 @@ function Work() {
   const [detail5, setDetail5] = useState(true);
   const [detail6, setDetail6] = useState(true);
   const [detail7, setDetail7] = useState(true);
+  const [detail8, setDetail8] = useState(true);
 
   function enterYe() {
     setDetail(false);
@@ -51,6 +53,82 @@ function Work() {
     <div id="work" className="flush-up">
       <h1 className="contact-name">WORK</h1>     
       <div className="work-hold">
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail8 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail8(false)}
+                onMouseLeave={() => setDetail8(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <a
+                    className="links"
+                    href="http://www.anchorstainless.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Deployed Site
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/sgubernikoff/Talve-Steel"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={anchor}
+              onMouseEnter={() => setDetail8(false)}
+              onMouseLeave={() => setDetail8(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail4 ? (
+              <div
+                className="details"
+                onMouseEnter={() => enterEarn()}
+                onMouseLeave={() => exitEarn()}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <a
+                    className="links"
+                    href="https://youtu.be/E4Ft8SYuUGA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/phase5project"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={cap}
+              onMouseEnter={() => enterEarn()}
+              onMouseLeave={() => exitEarn()}
+              alt="something"
+            />
+          </div>
+        </Tilt>
         <Tilt className="tilt">
           {/* <h2>Keeping Up With Kanye</h2> */}          
           <div className="projects">
@@ -91,7 +169,6 @@ function Work() {
           </div>
         </Tilt>
         <Tilt className="tilt">
-           
           <div className="projects">
             {!detail2 ? (
               <div
@@ -125,6 +202,44 @@ function Work() {
               src={rickandmorty}
               onMouseEnter={() => enterLeaf()}
               onMouseLeave={() => exitLeaf()}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail5 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail5(false)}
+                onMouseLeave={() => setDetail5(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <a
+                    className="links"
+                    href="https://agubernikoff.github.io/float/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Deployed Site
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/float/tree/main"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={float}
+              onMouseEnter={() => setDetail5(false)}
+              onMouseLeave={() => setDetail5(true)}
               alt="something"
             />
           </div>
@@ -168,121 +283,6 @@ function Work() {
         </Tilt>
         <Tilt className="tilt">
           <div className="projects">
-            {!detail4 ? (
-              <div
-                className="details"
-                onMouseEnter={() => enterEarn()}
-                onMouseLeave={() => exitEarn()}
-              >
-                <div className="links-hold">
-                  <img src={opaque} className="opaque" alt="opaque" />
-                  <a
-                    className="links"
-                    href="https://youtu.be/E4Ft8SYuUGA"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Demo
-                  </a>
-                  <a
-                    className="links"
-                    href="https://github.com/agubernikoff/phase5project"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            ) : null}
-            <img
-              className="ye"
-              src={cap}
-              onMouseEnter={() => enterEarn()}
-              onMouseLeave={() => exitEarn()}
-              alt="something"
-            />
-          </div>
-        </Tilt>
-
-        <Tilt className="tilt">
-          <div className="projects">
-            {!detail5 ? (
-              <div
-                className="details"
-                onMouseEnter={() => setDetail5(false)}
-                onMouseLeave={() => setDetail5(true)}
-              >
-                <div className="links-hold">
-                  <img src={opaque} className="opaque" alt="opaque" />
-                  <a
-                    className="links"
-                    href="https://agubernikoff.github.io/float/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Deployed Site
-                  </a>
-                  <a
-                    className="links"
-                    href="https://github.com/agubernikoff/float/tree/main"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            ) : null}
-            <img
-              className="ye"
-              src={float}
-              onMouseEnter={() => setDetail5(false)}
-              onMouseLeave={() => setDetail5(true)}
-              alt="something"
-            />
-          </div>
-        </Tilt>
-        <Tilt className="tilt">
-          <div className="projects">
-            {!detail6 ? (
-              <div
-                className="details"
-                onMouseEnter={() => setDetail6(false)}
-                onMouseLeave={() => setDetail6(true)}
-              >
-                <div className="links-hold">
-                  <img src={opaque} className="opaque" alt="opaque" />
-                  {/* <a
-                    className="links"
-                    href="https://youtu.be/E4Ft8SYuUGA"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Demo
-                  </a> */}
-                  <a
-                    className="links"
-                    href="https://alexandergubernikoff.crevado.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Creative Portfolio
-                  </a>
-                </div>
-              </div>
-            ) : null}
-            <img
-              className="ye"
-              src={creative}
-              onMouseEnter={() => setDetail6(false)}
-              onMouseLeave={() => setDetail6(true)}
-              alt="something"
-            />
-          </div>
-        </Tilt>
-        <Tilt className="tilt">
-          <div className="projects">
             {!detail7 ? (
               <div
                 className="details"
@@ -315,6 +315,44 @@ function Work() {
               src={port}
               onMouseEnter={() => setDetail7(false)}
               onMouseLeave={() => setDetail7(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail6 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail6(false)}
+                onMouseLeave={() => setDetail6(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  {/* <a
+                    className="links"
+                    href="https://youtu.be/E4Ft8SYuUGA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a> */}
+                  <a
+                    className="links"
+                    href="https://alexandergubernikoff.crevado.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Graphic Design Portfolio
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={creative}
+              onMouseEnter={() => setDetail6(false)}
+              onMouseLeave={() => setDetail6(true)}
               alt="something"
             />
           </div>
