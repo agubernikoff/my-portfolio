@@ -9,6 +9,7 @@ import port from "./assets/port.png";
 import creative from "./assets/creative.png";
 import float from "./assets/float.gif";
 import anchor from "./assets/anchor.png";
+import eco from "./assets/eco.png";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -19,6 +20,7 @@ function Work() {
   const [detail6, setDetail6] = useState(true);
   const [detail7, setDetail7] = useState(true);
   const [detail8, setDetail8] = useState(true);
+  const [detail9, setDetail9] = useState(true);
 
   function enterYe() {
     setDetail(false);
@@ -55,11 +57,11 @@ function Work() {
       <div className="work-hold">
         <Tilt className="tilt">
           <div className="projects">
-            {!detail8 ? (
+            {!detail9 ? (
               <div
                 className="details"
-                onMouseEnter={() => setDetail8(false)}
-                onMouseLeave={() => setDetail8(true)}
+                onMouseEnter={() => setDetail9(false)}
+                onMouseLeave={() => setDetail9(true)}
               >
                 <div className="links-hold">
                   <img src={opaque} className="opaque" alt="opaque" />
@@ -85,6 +87,47 @@ function Work() {
             <img
               className="ye"
               src={anchor}
+              onMouseEnter={() => setDetail9(false)}
+              onMouseLeave={() => setDetail9(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail8 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail8(false)}
+                onMouseLeave={() => setDetail8(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <p style={{ color: "white", zIndex: 2 }}>
+                    EcoHacks2022 Hackathon Submission
+                  </p>
+                  <a
+                    className="links"
+                    href="https://www.youtube.com/watch?v=jAx4Gip3KZw"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/ecohack/tree/main"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={eco}
               onMouseEnter={() => setDetail8(false)}
               onMouseLeave={() => setDetail8(true)}
               alt="something"
@@ -130,7 +173,6 @@ function Work() {
           </div>
         </Tilt>
         <Tilt className="tilt">
-          {/* <h2>Keeping Up With Kanye</h2> */}          
           <div className="projects">
             {!detail ? (
               <div
