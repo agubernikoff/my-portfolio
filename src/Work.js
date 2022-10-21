@@ -10,6 +10,8 @@ import creative from "./assets/creative.png";
 import float from "./assets/float.gif";
 import anchor from "./assets/anchor.png";
 import eco from "./assets/eco.png";
+import mills from "./assets/mills.png";
+import potd from "./assets/potd.png";
 
 function Work() {
   const [detail, setDetail] = useState(true);
@@ -21,6 +23,8 @@ function Work() {
   const [detail7, setDetail7] = useState(true);
   const [detail8, setDetail8] = useState(true);
   const [detail9, setDetail9] = useState(true);
+  const [detail10, setDetail10] = useState(true);
+  const [detail11, setDetail11] = useState(true);
 
   function enterYe() {
     setDetail(false);
@@ -57,6 +61,44 @@ function Work() {
       <div className="work-hold">
         <Tilt className="tilt">
           <div className="projects">
+            {!detail10 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail10(false)}
+                onMouseLeave={() => setDetail10(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <a
+                    className="links"
+                    href="http://www.pickoftheday.herokuapp.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Deployed Site
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/potd"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={potd}
+              onMouseEnter={() => setDetail10(false)}
+              onMouseLeave={() => setDetail10(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
             {!detail9 ? (
               <div
                 className="details"
@@ -89,6 +131,44 @@ function Work() {
               src={anchor}
               onMouseEnter={() => setDetail9(false)}
               onMouseLeave={() => setDetail9(true)}
+              alt="something"
+            />
+          </div>
+        </Tilt>
+        <Tilt className="tilt">
+          <div className="projects">
+            {!detail11 ? (
+              <div
+                className="details"
+                onMouseEnter={() => setDetail11(false)}
+                onMouseLeave={() => setDetail11(true)}
+              >
+                <div className="links-hold">
+                  <img src={opaque} className="opaque" alt="opaque" />
+                  <a
+                    className="links"
+                    href="http://www.maxmillstein.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Deployed Site
+                  </a>
+                  <a
+                    className="links"
+                    href="https://github.com/agubernikoff/mills-portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            ) : null}
+            <img
+              className="ye"
+              src={mills}
+              onMouseEnter={() => setDetail11(false)}
+              onMouseLeave={() => setDetail11(true)}
               alt="something"
             />
           </div>
